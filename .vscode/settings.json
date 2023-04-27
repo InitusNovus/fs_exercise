@@ -1,0 +1,8 @@
+{
+	"FSharp.inlineValues.enabled": true,
+	"FSharp.inlineValues.prefix": "  // #",
+	"FSharp.lineLens.enabled": "replaceCodeLens",
+	"FSharp.codeLenses.signature.enabled": true,
+	"FSharp.codeLenses.references.enabled": true,
+	"FSharp.pipelineHints.enabled": true
+}
