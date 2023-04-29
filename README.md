@@ -97,7 +97,47 @@ Create a simple program that reads and writes records (e.g., people's names and 
  2. ```writeRecords```: Takes a file name and a list of records as arguments and writes the records to the file.
  3. ```addRecord```: Takes a list of records and a new record as arguments, and returns a new list with the new record added.
 
-## Problem 7. CSV Average Calculator (upcoming)
+## Problem 7. Reverse a List (upcoming)
+### Subject
+List processing and recursion
+
+### Task
+Implement a function that reverses a list using recursion. The function should take a list as input and return a new list with the elements in reverse order.
+
+Here's a template to get you started:
+
+```F#
+let rec reverseList lst =
+    match lst with
+    | // Your code here
+
+// Test your implementation
+let testList = [1; 2; 3; 4; 5]
+printfn "%A" (reverseList testList) // Should print [5; 4; 3; 2; 1]
+```
+To solve this problem, use pattern matching to handle the base case (an empty list) and the recursive case (a non-empty list). In the recursive case, you will need to append the head of the input list to the result of reversing the tail of the list. Test your implementation with various input lists to ensure it produces the correct output.
+
+## Problem 8. Flatten Nested Lists (upcoming)
+### Subject
+List processing and recursion
+
+### Task
+Implement a function that flattens a nested list structure. The function should take a nested list as input and return a new list containing all the elements from the input list, in the same order but without any nesting.
+
+Here's a template to get you started:
+
+```F#
+let rec flatten lst =
+    match lst with
+    | // Your code here
+
+// Test your implementation
+let testNestedList = [[1; 2]; [3; 4; 5]; [6]; []; [7; 8; 9]]
+printfn "%A" (flatten testNestedList) // Should print [1; 2; 3; 4; 5; 6; 7; 8; 9]
+```
+To solve this problem, use pattern matching to handle the base case (an empty list) and the recursive case (a non-empty list). In the recursive case, you will need to concatenate the head of the input list (which is itself a list) with the result of flattening the tail of the input list. Test your implementation with various input lists to ensure it produces the correct output.
+
+## Problem 9. CSV Average Calculator (upcoming)
 ### Subject
 File I/O, CSV Processing
 
@@ -124,7 +164,7 @@ printfn "%.2f" (averageOfColumn testFileName testColumnName) // Should print 5.0
 ```
 These problem statements and tasks should provide more guidance for completing the remaining problems. If you need more assistance, please don't hesitate to ask.
 
-## Problem 8. Contact List Manager (upcoming)
+## Problem 10. Contact List Manager (upcoming)
 ### Subject
 Command-line interface, Data Manipulation
 ### Task
@@ -195,29 +235,17 @@ To implement this project, consider the following suggestions:
  4. Use pattern matching and/or if-then-else expressions to process user input and call the appropriate functions.
  5. Use F# file I/O functions to save and load tasks from a file (e.g., using ```System.IO.File``` methods).
 
-## Problem 9. Find Prime Numbers (upcoming)
-### Subject
-Math and prime numbers
-### Task
-Implement a function that finds all prime numbers up to a given limit.
-
-## Problem 10. Reverse a List (upcoming)
-### Subject
-List processing and recursion
-### Task
-Implement a function that reverses a list using recursion.
-
-## Problem 11. Flatten Nested Lists (upcoming)
-### Subject
-List processing and recursion
-###Task
-Implement a function that flattens a nested list structure.
-
-## Problem 12. Merge Sort (upcoming)
+## Problem 11. Merge Sort (upcoming)
 ### Subject
 Sorting algorithms and recursion
 ### Task
 Implement the merge sort algorithm for a list of integers.
+
+## Problem 12. Find Prime Numbers (upcoming)
+### Subject
+Math and prime numbers
+### Task
+Implement a function that finds all prime numbers up to a given limit.
 
 ## Problem 13. Combination Generator (upcoming)
 ### Subject
