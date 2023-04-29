@@ -73,12 +73,14 @@ Write a function called ```isPalindrome``` that takes a string as an argument an
 ## Problem 4. Group Elements
 ### Subject
 List Processing, Recursion
+
 ### Task
 Write a function called ```groupElements``` that takes a list of integers and an integer ```n``` as arguments, and returns a list of lists, where each inner list contains n elements from the input list. If the input list does not divide evenly by n, the last inner list should contain the remaining elements. Use list processing functions and recursion to implement this function.
 
 ## Problem 5. Person Type and Functions
 ### Subject
 Record Types, Function Composition
+
 ### Task
 Define a ```Person``` record type with properties ```FirstName```, ```LastName```, and ```Age```. Create the following functions:
  1. ```createPerson```: Takes a first name, last name, and age as arguments, and returns a new ```Person``` record.
@@ -88,6 +90,7 @@ Define a ```Person``` record type with properties ```FirstName```, ```LastName``
 ## Problem 6. File I/O with Simple Text Database
 ### Subject
 File I/O, List Processing
+
 ### Task
 Create a simple program that reads and writes records (e.g., people's names and ages) from a text file. Implement the following functions:
  1. ```readRecords```: Takes a file name as an argument and returns a list of records read from the file.
@@ -97,18 +100,40 @@ Create a simple program that reads and writes records (e.g., people's names and 
 ## Problem 7. CSV Average Calculator (upcoming)
 ### Subject
 File I/O, CSV Processing
+
 ### Task
-Create a function that reads a CSV file and calculates the average of numbers in a specified column.
+Create a function that reads a CSV file and calculates the average of numbers in a specified column. Assume that the CSV file has a header row and the data rows contain only numbers. The CSV file could look like this:
+```txt
+A,B,C
+1,2,3
+4,5,6
+7,8,9
+```
+Implement a function ```averageOfColumn``` that takes a file name and a column name as arguments, reads the CSV file, and calculates the average of the specified column. Use F#'s file I/O functions and string manipulation functions to process the CSV file. When you've completed your implementation, test it with various CSV files and column names to ensure it produces the correct output.
+
+Here's a template to get you started:
+
+```F#
+let averageOfColumn fileName columnName =
+    // Your code here
+
+// Test your implementation
+let testFileName = "test.csv"
+let testColumnName = "B"
+printfn "%.2f" (averageOfColumn testFileName testColumnName) // Should print 5.00
+```
+These problem statements and tasks should provide more guidance for completing the remaining problems. If you need more assistance, please don't hesitate to ask.
 
 ## Problem 8. Contact List Manager (upcoming)
-###Subject
+### Subject
 Command-line interface, Data Manipulation
-###Task
+### Task
 Create a command-line application that takes user input to perform various operations on a list of contacts (add, delete, search, etc.).
 
 ## Project Idea: Simple Command-Line Todo List Application (upcoming)
 ### Subject
 Application Structure, File I/O, Command-Line Interface
+
 ### Task
 Create a simple command-line todo list application that allows users to manage their tasks. The application should support the following operations:
 
