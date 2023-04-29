@@ -70,12 +70,38 @@ String Manipulation, Pattern Matching
 ### Task
 Write a function called ```isPalindrome``` that takes a string as an argument and returns ```true``` if the input string is a palindrome, and ```false``` otherwise. A palindrome is a word, phrase, number, or other sequences of characters that reads the same forward and backward (ignoring spaces, punctuation, and capitalization).
 
+Write a function called isPalindrome that takes a string as an argument and returns true if the input string is a palindrome, and false otherwise. A palindrome is a word, phrase, number, or other sequences of characters that reads the same forward and backward (ignoring spaces, punctuation, and capitalization).
+
+Here's a template to get you started:
+
+```F#
+let isPalindrome (input: string) =
+    // Your code here
+
+// Test your implementation
+printfn "%b" (isPalindrome "racecar") // Should print true
+printfn "%b" (isPalindrome "hello") // Should print false
+```
+To solve this problem, consider using F#'s string manipulation functions to remove spaces, punctuation, and convert the string to lowercase. Then, you can compare the original cleaned string with its reverse. If they are the same, the input string is a palindrome. Once you've completed your implementation, test it with various input strings to ensure it produces the correct output.
+
 ## Problem 4. Group Elements
 ### Subject
 List Processing, Recursion
 
 ### Task
 Write a function called ```groupElements``` that takes a list of integers and an integer ```n``` as arguments, and returns a list of lists, where each inner list contains n elements from the input list. If the input list does not divide evenly by n, the last inner list should contain the remaining elements. Use list processing functions and recursion to implement this function.
+
+Here's a template to get you started:
+
+```F#
+let rec groupElements lst n =
+    // Your code here
+
+// Test your implementation
+let testList = [1; 2; 3; 4; 5; 6; 7; 8; 9; 10]
+printfn "%A" (groupElements testList 3) // Should print [[1; 2; 3]; [4; 5; 6]; [7; 8; 9]; [10]]
+```
+To solve this problem, use pattern matching to handle the base case (an empty list) and the recursive case (a non-empty list). In the recursive case, create a new list with the first n elements of the input list, and concatenate this list with the result of calling ```groupElements``` on the remaining elements of the input list. Test your implementation with various input lists and group sizes to ensure it produces the correct output.
 
 ## Problem 5. Person Type and Functions
 ### Subject
@@ -86,6 +112,31 @@ Define a ```Person``` record type with properties ```FirstName```, ```LastName``
  1. ```createPerson```: Takes a first name, last name, and age as arguments, and returns a new ```Person``` record.
  2. ```fullName```: Takes a ```Person``` record as an argument and returns a string containing the person's full name (i.e., first name and last name separated by a space).
  3. ```isAdult```: Takes a ```Person``` record as an argument and returns ```true``` if the person's age is 18 or older, and ```false``` otherwise.
+
+ Here's a template to get you started:
+
+```F#
+ type Person = {
+    FirstName: string
+    LastName: string
+    Age: int
+}
+
+let createPerson firstName lastName age =
+    { FirstName = firstName; LastName = lastName; Age = age }
+
+let fullName person =
+    person.FirstName + " " + person.LastName
+
+let isAdult person =
+    person.Age >= 18
+
+// Test your implementation
+let person = createPerson "John" "Doe" 25
+printfn "Full name: %s" (fullName person)
+printfn "Is adult: %b" (isAdult person)
+```
+This code defines a ```Person``` record type with ```FirstName```, ```LastName```, and ```Age``` properties. It also defines the ```createPerson```, ```fullName```, and ```isAdult``` functions. Finally, it tests the implementation with a sample person.
 
 ## Problem 6. File I/O with Simple Text Database
 ### Subject
