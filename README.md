@@ -128,7 +128,50 @@ These problem statements and tasks should provide more guidance for completing t
 ### Subject
 Command-line interface, Data Manipulation
 ### Task
-Create a command-line application that takes user input to perform various operations on a list of contacts (add, delete, search, etc.).
+Create a command-line application that allows users to perform various operations on a list of contacts. The application should support the following operations:
+
+ 1. Add a new contact
+ 2. Delete a contact
+ 3. Search for a contact by name
+ 4. Update contact details
+ 5. List all contacts
+ 6. Save contacts to a file
+ 7. Load contacts from a file
+
+To implement this project, consider the following suggestions:
+
+ 1. Create a ```Contact``` type to represent a contact with properties such as ```Id```, ```FirstName```, ```LastName```, ```Email```, and ```PhoneNumber```.
+ 2. Use a list or other collection to store contacts in memory.
+ 3. Create functions to handle each operation (e.g., ```addContact```, ```deleteContact```, ```searchContact```, ```updateContact```, ```listContacts```, ```saveContacts```, and ```loadContacts```).
+ 4. Use pattern matching and/or if-then-else expressions to process user input and call the appropriate functions.
+ 5. Use F# file I/O functions to save and load contacts from a file (e.g., using ```System.IO.File``` methods).
+
+Your command-line application should be interactive and present a menu to the user. The menu should display the available operations and prompt the user for input. Based on the user's input, the application should perform the corresponding operation and display the result. The application should continue running until the user decides to exit.
+
+Here's a rough outline of how your application might look:
+```F#
+type Contact = {
+    Id: int
+    FirstName: string
+    LastName: string
+    Email: string
+    PhoneNumber: string
+}
+
+// Functions for contact management (addContact, deleteContact, searchContact, updateContact, listContacts, saveContacts, and loadContacts)
+
+let rec mainLoop contacts =
+    // Display the menu and prompt the user for input
+    // Perform the selected operation
+    // Update the contacts list if necessary
+    // Call mainLoop with the updated contacts list
+
+// Load contacts from a file (if available) and start the main loop
+let initialContacts = loadContacts "contacts.txt"
+mainLoop initialContacts
+```
+
+Make sure to test your implementation with various operations and scenarios to ensure it works correctly.
 
 ## Project Idea: Simple Command-Line Todo List Application (upcoming)
 ### Subject
