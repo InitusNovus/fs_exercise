@@ -18,15 +18,11 @@ The exercise problems for F# practice suggested by ChatGPT
 >As you continue learning F#, consider exploring these areas based on your interests and the problems you'd like to solve. The language's flexibility, expressiveness, and robustness make it a powerful tool for a wide range of applications.
 
 
-
-
-
-
 ## Problem 1. Fibonacci Sequence
 ### Subject 
 Recursion, Tail Recursion
 
-### Problem
+### Task
 Write a function that takes a positive integer n as input and returns the nth number in the Fibonacci sequence. The Fibonacci sequence is defined as follows:
 
 $$F(0) = 0$$
@@ -34,10 +30,6 @@ $$F(0) = 0$$
 $$F(1) = 1$$
 
 $$F(n) = F(n-1) + F(n-2)\quad \sf for \it \quad  n > 1$$
-
-
-### Task
-Implement a recursive function fibonacci that calculates the nth Fibonacci number.
 
 Here's a template to get you started:
 ```F#
@@ -54,11 +46,8 @@ To solve this problem, you'll need to use pattern matching to handle the base ca
 ### Subject
 Higher-Order Functions, List Processing, Pattern Matching
 
-### Problem
-Write a function that takes a list of integers and returns a new list containing the squares of the odd numbers in the input list.
-
 ### Task
-Implement a function squaresOfOdds that filters the odd numbers from the input list, squares them, and returns the resulting list.
+Write a function that takes a list of integers and returns a new list containing the squares of the odd numbers in the input list.
 
 Here's a template to get you started:
 
@@ -77,26 +66,33 @@ Additionally, you can use pattern matching to identify odd numbers. Once you've 
 ## Problem 3. Palindrome Checker
 ### Subject
 String Manipulation, Pattern Matching
+
 ### Task
-Implement a function isPalindrome that checks whether a given string is a palindrome or not.
+Write a function called ```isPalindrome``` that takes a string as an argument and returns ```true``` if the input string is a palindrome, and ```false``` otherwise. A palindrome is a word, phrase, number, or other sequences of characters that reads the same forward and backward (ignoring spaces, punctuation, and capitalization).
 
 ## Problem 4. Group Elements
 ### Subject
 List Processing, Recursion
 ### Task
-Implement a function groupElements that takes a list of integers and an integer n as arguments, and returns a list of lists, where each inner list contains n elements from the input list.
+Write a function called ```groupElements``` that takes a list of integers and an integer ```n``` as arguments, and returns a list of lists, where each inner list contains n elements from the input list. If the input list does not divide evenly by n, the last inner list should contain the remaining elements. Use list processing functions and recursion to implement this function.
 
 ## Problem 5. Person Type and Functions
 ### Subject
 Record Types, Function Composition
 ### Task
-Define a Person record type with properties FirstName, LastName, and Age. Create the following functions: createPerson, fullName, and isAdult.
+Define a ```Person``` record type with properties ```FirstName```, ```LastName```, and ```Age```. Create the following functions:
+ 1. ```createPerson```: Takes a first name, last name, and age as arguments, and returns a new ```Person``` record.
+ 2. ```fullName```: Takes a ```Person``` record as an argument and returns a string containing the person's full name (i.e., first name and last name separated by a space).
+ 3. ```isAdult```: Takes a ```Person``` record as an argument and returns ```true``` if the person's age is 18 or older, and ```false``` otherwise.
 
 ## Problem 6. File I/O with Simple Text Database
 ### Subject
 File I/O, List Processing
 ### Task
-Create a simple program that reads and writes records (e.g., people's names and ages) from a text file. Implement the following functions: readRecords, writeRecords, and addRecord.
+Create a simple program that reads and writes records (e.g., people's names and ages) from a text file. Implement the following functions:
+ 1. ```readRecords```: Takes a file name as an argument and returns a list of records read from the file.
+ 2. ```writeRecords```: Takes a file name and a list of records as arguments and writes the records to the file.
+ 3. ```addRecord```: Takes a list of records and a new record as arguments, and returns a new list with the new record added.
 
 ## Problem 7. CSV Average Calculator (upcoming)
 ### Subject
@@ -114,7 +110,22 @@ Create a command-line application that takes user input to perform various opera
 ### Subject
 Application Structure, File I/O, Command-Line Interface
 ### Task
-Create a simple command-line todo list application that allows users to manage their tasks. Implement functions to handle each operation (e.g., addTask, listTasks, markTaskComplete, removeTask, saveTasks, and loadTasks).
+Create a simple command-line todo list application that allows users to manage their tasks. The application should support the following operations:
+
+ 1. Add a new task.
+ 2. List all tasks.
+ 3. Mark a task as complete.
+ 4. Remove a task.
+ 5. Save tasks to a file.
+ 6. Load tasks from a file.
+
+To implement this project, consider the following suggestions:
+
+ 1. Create a ```Task``` type to represent a task with properties such as ```Id```, ```Description```, and ```IsCompleted```.
+ 2. Use a list or other collection to store tasks in memory.
+ 3. Create functions to handle each operation (e.g., ```addTask```, ```listTasks```, ```markTaskComplete```, ```removeTask```, ```saveTasks```, and ```loadTasks```).
+ 4. Use pattern matching and/or if-then-else expressions to process user input and call the appropriate functions.
+ 5. Use F# file I/O functions to save and load tasks from a file (e.g., using ```System.IO.File``` methods).
 
 ## Problem 9. Find Prime Numbers (upcoming)
 ### Subject
