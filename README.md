@@ -29,7 +29,7 @@ $$F(0) = 0$$
 
 $$F(1) = 1$$
 
-$$F(n) = F(n-1) + F(n-2)\quad \sf for \it \quad  n > 1$$
+$$F\left(n\right) = \left(n-1\right) + F\left(n-2\right)\quad \mathsf{for}  \quad  n > 1$$
 
 Here's a template to get you started:
 ```F#
