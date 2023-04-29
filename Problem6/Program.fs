@@ -8,37 +8,35 @@ let ( >>= ) f opt =
 let ( >== ) f opt =
     f |> Option.map opt
 
-module Option =
-    let bindException inputFun param =
+let tee f = 
+    fun x -> 
+        f x
+        x
+
+module Option =  
+    let tryCatch f x =
         try 
-            Some(inputFun(param))
+            f x |> Some
         with
         | ex ->
-            eprintfn "%s" ex.Message 
+            eprintfn "%s" ex.Message
             None
 
 
 module FileRecord =
-
     let readRecords parseFun fileName= 
-        Option.bindException(File.ReadLines) fileName
+        Option.tryCatch File.ReadLines fileName
         >== Seq.map parseFun
         >== Seq.toList
 
     let writeString fileName (str:string list) = 
-            try 
-                File.WriteAllLines(fileName, str)
-                Some fileName
-            with 
-            |ex ->
-                eprintfn "%s" ex.Message
-                None
+        Option.tryCatch(fun _ -> File.WriteAllLines(fileName, str)) ()
+        |> function
+        | Some _ -> Some fileName
+        | None -> None
+            
         
-
-open FileRecord
-
 module ReadTextFile =
-
     let parseArg =
         function
         | [| input: string |] ->
@@ -50,32 +48,28 @@ module ReadTextFile =
             eprintfn "Error: Wrong Argument"
             None
 
-    let printValue input = 
-        input |> printfn "%A"
-        input
-
     let getInput msg = 
         printf "%s" msg
-        Option.bindException Console.ReadLine ()
+        Option.tryCatch Console.ReadLine ()
 
-
+open FileRecord
 open ReadTextFile
 
 [<EntryPoint>]
 let main argv =
-    argv |> parseArg |> ignore  //Just for test
+    argv |> parseArg |> ignore          //Just for test
 
     getInput "Enter the file to be open: " 
     >>= readRecords Person.fromString
-    >== List.choose id      //Pick valuse of options in the list
-    >== List.map printValue //Print each value in the list
+    >== List.choose id                  //Pick valuse of options in the list
+    >== List.map (tee (printfn "%A"))   //Print each value in the list for logging
     >== List.map Person.toString
-    >== List.map printValue
+    >== List.map (tee (printfn "%A"))   //Print each value in the list for logging
     >>= writeString "PeopleWrite.csv"
     |> function
-    | Some name ->
-        printfn "\"%s\" has writen successfully." name
-        0
-    | None -> 
-        eprintfn "File writing failed."
-        1
+        | Some name ->
+            printfn "\"%s\" has writen successfully." name
+            0
+        | None -> 
+            eprintfn "File writing failed."
+            1
