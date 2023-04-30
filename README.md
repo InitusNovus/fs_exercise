@@ -264,7 +264,7 @@ mainLoop initialContacts
 
 Make sure to test your implementation with various operations and scenarios to ensure it works correctly.
 
-## Project Idea: Simple Command-Line Todo List Application (upcoming)
+## Project 1. Simple Command-Line Todo List Application (upcoming)
 ### Subject
 Application Structure, File I/O, Command-Line Interface
 
@@ -286,26 +286,275 @@ To implement this project, consider the following suggestions:
  4. Use pattern matching and/or if-then-else expressions to process user input and call the appropriate functions.
  5. Use F# file I/O functions to save and load tasks from a file (e.g., using ```System.IO.File``` methods).
 
-## Problem 11. Merge Sort (upcoming)
+## Problem 11. Poker Hand Evaluator 
 ### Subject
-Sorting algorithms and recursion
-### Task
-Implement the merge sort algorithm for a list of integers.
+Custom types and pattern matching
 
-## Problem 12. Find Prime Numbers (upcoming)
+### Task
+Create a simple poker hand evaluator using custom types and pattern matching.
+
+## Problem 12. Text Data Analyzer
 ### Subject
-Math and prime numbers
-### Task
-Implement a function that finds all prime numbers up to a given limit.
+Higher-order functions and map-reduce
 
-## Problem 13. Combination Generator (upcoming)
+### Task
+Implement a map-reduce algorithm to analyze a collection of text data using higher-order functions.
+
+## Problem 13. Library System Modeling
 ### Subject
-Combinatorics and recursion
-### Task
-Implement a function that generates all combinations of a given length from a list of elements.
+Domain modeling and custom types
 
-## Problem 14. Simple Expression Evaluator (upcoming)
+### Task
+Model a library system using F# types and functions for domain modeling.
+
+## Problem 14. Custom Record Sorter
+### Subject
+Recursion and custom types
+
+### Task
+Implement the merge sort algorithm to sort a list of custom records.
+
+## Problem 15. Prime Number Summation
+### Subject
+List manipulation and filtering
+
+### Task
+Find prime numbers within a range and return their sum.
+
+## Problem 16. Team Combination Generator
+### Subject
+Combinatorics and list manipulation
+
+### Task
+Generate possible team combinations for a group project.
+
+## Problem 17. Arithmetic Expression Evaluator
 ### Subject
 Parsing and expression evaluation
+
 ### Task
-Implement a function that evaluates simple arithmetic expressions.
+Evaluate arithmetic expressions entered by a user.
+
+## Problem 18. Sales Data Analyzer
+### Subject
+Sequence operations and data manipulation
+
+### Task
+Analyze a list of sales data using sequence operations (filter, map, reduce).
+
+## Problem 19. Social Network Friend Recommendation
+### Subject
+List manipulation and algorithms
+
+### Task
+Implement a simple social network's friend recommendation system using list manipulation functions.
+
+## Problem 20. Data Processing Pipeline
+### Subject
+List, array, and sequence conversion
+
+### Task
+Convert between lists, arrays, and sequences in a simple data processing pipeline.
+
+## Problem 21. Infinite Prime Number Generator
+### Subject
+Lazy evaluation and sequence generation
+
+### Task
+Generate an infinite sequence of prime numbers and find the Nth prime using lazy evaluation.
+
+## Project 2. Basic Weather Forecast App
+### Subject
+API interaction and data processing
+
+### Task
+Create an F# application that fetches weather data from an API and displays it.
+
+## Problem 22. Web Scraper
+### Subject
+Async programming and web scraping
+
+### Task
+Write a web scraper that fetches data from multiple sources asynchronously using async programming.
+
+## Problem 23. Login System with Error Handling
+### Subject
+Result type and error handling
+
+### Task
+Implement a login system using the Result type for error handling in F# functions.
+
+## Problem 24. Structured Text Data Parser
+### Subject
+Parsing and data extraction
+
+### Task
+Build a parser to extract information from structured text data.
+
+## Problem 25. Custom Markdown Interpreter
+### Subject
+Interpreters and parsing
+
+### Task
+Design an interpreter for a custom markdown language.
+
+## Problem 26. Bank Account Simulation
+### Subject
+State monad and functional programming
+
+### Task
+Implement a state monad for a simple simulation of a bank account system.
+
+## Problem 27. Basic UI Components
+### Subject
+GUI programming and Avalonia.FuncUI
+
+### Task
+Create a simple GUI application with basic UI components (buttons, labels, text inputs).
+
+## Problem 28. Event Handling and State Management
+### Subject
+Event handling and state management in GUI applications
+
+### Task
+Implement event handling and state management in a GUI application.
+
+## Problem 29. Data Binding
+### Subject
+Data binding in GUI applications
+
+### Task
+Bind data to UI components in a GUI application.
+
+## Problem 30. Custom Styling
+### Subject
+Styling and customization in GUI applications
+
+### Task
+Apply custom styles to UI components in a GUI application.
+
+## Project 3. Simple Note-Taking Application
+### Subject
+GUI programming, event handling, and data management
+
+### Task
+Build a simple note-taking application using Avalonia.FuncUI.
+
+## Problem 31. Simple Web Server
+### Subject
+Web framework and server setup
+
+### Task
+Build a basic web server using the Giraffe web framework.
+
+## Problem 32. RESTful Endpoint
+### Subject
+RESTful API and web framework
+
+### Task
+Create a RESTful endpoint for managing a resource using F# and the Giraffe web framework.
+
+## Project 4. Build a Simple REST API
+### Subject
+Web development, API design, and Giraffe web framework
+
+### Task
+Develop a simple RESTful API using F# and the Giraffe web framework.
+
+## Project 5. Functional Event Sourcing
+### Subject
+Event sourcing and functional programming
+
+### Task
+Implement event sourcing in a functional way using F# for a simple ### Task management system.
+
+## Problem 33. Tree View and Data Hierarchy
+### Subject
+GUI programming and hierarchical data
+
+### Task
+Implement a tree view to display hierarchical data in a GUI application.
+
+## Problem 34. Custom UI Components
+### Subject
+GUI programming and custom components
+
+### Task
+Create custom UI components and reuse them in a GUI application.
+
+## Problem 35. Data Validation
+### Subject
+GUI programming and data validation
+
+### Task
+Implement data validation for user input in a GUI application.
+
+## Problem 36. Navigation and Routing
+### Subject
+GUI programming and navigation
+
+### Task
+Set up navigation and routing between different views in a GUI application.
+
+## Problem 37. Asynchronous Data Fetching
+### Subject
+GUI programming and async programming
+
+### Task
+Fetch data asynchronously and update the UI in a GUI application.
+
+## Project 6. Personal Finance Manager
+### Subject
+GUI programming, data management, and Avalonia.FuncUI
+
+### Task
+Build a personal finance manager application using Avalonia.FuncUI, where users can add, edit, and track their expenses and incomes.
+
+## Problem 38. Domain Modeling
+### Subject
+Domain modeling and custom types
+
+### Task
+Model a simple domain using F# types and functions.
+
+## Problem 39. Domain Modeling for an E-commerce System
+### Subject
+Domain modeling and functional programming
+
+### Task
+Design a domain model for a simple e-commerce system using F# and functional programming concepts.
+
+## Problem 40. Authentication and Authorization
+### Subject
+Web development and security
+
+### Task
+Implement authentication and authorization in a web application using F# and the Giraffe web framework.
+
+## Problem 41. Server-side Rendering
+### Subject
+Web development and server-side rendering
+
+### Task
+Set up server-side rendering for a web application using F# and the Giraffe web framework.
+
+## Problem 42. Form Handling and Validation
+### Subject
+Web development and form handling
+
+### Task
+Handle form submissions and perform validation on the server-side in a web application using F# and the Giraffe web framework.
+
+## Problem 43. Websockets
+### Subject
+Web development and real-time communication
+
+### Task
+Implement real-time communication using websockets in a web application with F# and the Giraffe web framework.
+
+## Project 7. Real-Time Chat Application
+### Subject
+Web development, real-time communication, and websockets
+
+### Task
+Develop a real-time chat application using F#, the Giraffe web framework, and websockets.
