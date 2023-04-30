@@ -123,13 +123,13 @@ Define a ```Person``` record type with properties ```FirstName```, ```LastName``
 }
 
 let createPerson firstName lastName age =
-    { FirstName = firstName; LastName = lastName; Age = age }
+    // Your code hear
 
 let fullName person =
-    person.FirstName + " " + person.LastName
+    // Your code hear
 
 let isAdult person =
-    person.Age >= 18
+    // Your code hear
 
 // Test your implementation
 let person = createPerson "John" "Doe" 25
@@ -148,7 +148,7 @@ Create a simple program that reads and writes records (e.g., people's names and 
  2. ```writeRecords```: Takes a file name and a list of records as arguments and writes the records to the file.
  3. ```addRecord```: Takes a list of records and a new record as arguments, and returns a new list with the new record added.
 
-## Problem 7. Reverse a List (upcoming)
+## Problem 7. Reverse a List
 ### Subject
 List processing and recursion
 
