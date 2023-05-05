@@ -178,9 +178,9 @@ printfn "%A" (reverseList testList) // Should print [5; 4; 3; 2; 1]
 To solve this problem, use pattern matching to handle the base case (an empty list) and the recursive case (a non-empty list). In the recursive case, you will need to append the head of the input list to the result of reversing the tail of the list. Test your implementation with various input lists to ensure it produces the correct output.
 
 ### Review
-This function is ``List.rev`` in F#core library.
+This function is ``List.rev`` in F# Core library.
 
-## Problem 8. Flatten Nested Lists (upcoming)
+## Problem 8. Flatten Nested Lists
 ### Subject
 List processing and recursion
 
@@ -199,6 +199,10 @@ let testNestedList = [[1; 2]; [3; 4; 5]; [6]; []; [7; 8; 9]]
 printfn "%A" (flatten testNestedList) // Should print [1; 2; 3; 4; 5; 6; 7; 8; 9]
 ```
 To solve this problem, use pattern matching to handle the base case (an empty list) and the recursive case (a non-empty list). In the recursive case, you will need to concatenate the head of the input list (which is itself a list) with the result of flattening the tail of the input list. Test your implementation with various input lists to ensure it produces the correct output.
+
+### Review
+This function is ``List.collect`` in F# Core library.
+
 
 ## Problem 9. CSV Average Calculator (upcoming)
 ### Subject
