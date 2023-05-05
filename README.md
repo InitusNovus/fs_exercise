@@ -17,6 +17,12 @@ The exercise problems for F# practice suggested by ChatGPT
 > 
 >As you continue learning F#, consider exploring these areas based on your interests and the problems you'd like to solve. The language's flexibility, expressiveness, and robustness make it a powerful tool for a wide range of applications.
 
+## Useful Links
+
+* [F# Cocs](https://learn.microsoft.com/en-us/dotnet/fsharp/)
+* [F# Core Library Documentation](https://fsharp.github.io/fsharp-core-docs/)
+* [F# Snippets](http://www.fssnip.net)
+* [Awesome F#](https://github.com/fsprojects/awesome-fsharp)
 
 ## Problem 1. Fibonacci Sequence
 ### Subject 
@@ -41,6 +47,9 @@ let rec fibonacci n =
 printfn "%d" (fibonacci 10) // Should print 55
 ```
 To solve this problem, you'll need to use pattern matching to handle the base cases (```n = 0``` and ```n = 1```) and the recursive case (```n > 1```). When you've completed your implementation, test it with various input values to ensure it produces the correct Fibonacci numbers.
+
+### Rewiew
+We should a technique called "tail recurssion", which is a form of recursion where the recursive call is the last operation in the function, to avoid stack overflow. 
 
 ## Problem 2. Squares of Odd Numbers
 ### Subject
@@ -168,6 +177,9 @@ printfn "%A" (reverseList testList) // Should print [5; 4; 3; 2; 1]
 ```
 To solve this problem, use pattern matching to handle the base case (an empty list) and the recursive case (a non-empty list). In the recursive case, you will need to append the head of the input list to the result of reversing the tail of the list. Test your implementation with various input lists to ensure it produces the correct output.
 
+### Review
+This function is ``List.rev`` in F#core library.
+
 ## Problem 8. Flatten Nested Lists (upcoming)
 ### Subject
 List processing and recursion
@@ -213,8 +225,7 @@ let testFileName = "test.csv"
 let testColumnName = "B"
 printfn "%.2f" (averageOfColumn testFileName testColumnName) // Should print 5.00
 ```
-These problem statements and tasks should provide more guidance for completing the remaining problems. If you need more assistance, please don't hesitate to ask.
-
+These problem statements and tasks should provide more guidance for completing the remaining problems.
 ## Problem 10. Contact List Manager (upcoming)
 ### Subject
 Command-line interface, Data Manipulation
