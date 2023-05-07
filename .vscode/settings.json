@@ -4,5 +4,11 @@
 	"FSharp.lineLens.enabled": "replaceCodeLens",
 	"FSharp.codeLenses.signature.enabled": true,
 	"FSharp.codeLenses.references.enabled": true,
-	"FSharp.pipelineHints.enabled": true
+	"FSharp.pipelineHints.enabled": true,
+	"[fsharp]": {
+		"editor.insertSpaces": true,
+		"editor.tabSize": 4,
+		"editor.defaultFormatter": "Ionide.Ionide-fsharp"
+	},
+	"editor.defaultFormatter": "Ionide.Ionide-fsharp"
 }
