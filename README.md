@@ -24,6 +24,11 @@ The exercise problems for F# practice suggested by ChatGPT
 * [F# Snippets](http://www.fssnip.net)
 * [Awesome F#](https://github.com/fsprojects/awesome-fsharp)
 
+## TODOs
+
+* TorchSharp and DiffSharp for ML
+* P/Invoke to use native C/C++ codes for fast data processing
+
 ## Problem 1. Fibonacci Sequence
 ### Subject 
 Recursion, Tail Recursion
